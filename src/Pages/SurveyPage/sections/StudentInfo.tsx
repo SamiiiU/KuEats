@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, GraduationCap } from 'lucide-react';
-import { StudentInfo as StudentInfoType } from '../types/survey';
+import { StudentInfo as StudentInfoType } from '../../../types/survey';
 
 interface StudentInfoProps {
   onSubmit: (data: StudentInfoType) => void;
@@ -55,9 +55,9 @@ const StudentInfo: React.FC<StudentInfoProps> = ({ onSubmit }) => {
         transition={{ delay: 0.2, duration: 0.6 }}
       >
         <div className="text-center mb-8 ">
-          <GraduationCap className="mx-auto mb-4 text-orange-600" size={48} />
+          <GraduationCap className="mx-auto mb-4 text-[#831615]" size={48} />
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Tell us about yourself!</h2>
-          <p className="text-gray-600">Let's get to know our future KuEats family member 🎓</p>
+          <p className="text-gray-600">Let's get to know our future KuEats family member </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

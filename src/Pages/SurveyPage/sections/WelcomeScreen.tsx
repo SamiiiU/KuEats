@@ -64,7 +64,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          Complete this survey and unlock <span className="font-bold text-[#831615]  px-2 py-1 rounded-full">5% discount</span> on your first KuEats order!
+          Complete this survey and unlock <span className="font-bold text-[#831615]  px-2 py-1 rounded-full">10% discount</span> on your first KuEats order!
         </motion.p>
         
         <motion.button

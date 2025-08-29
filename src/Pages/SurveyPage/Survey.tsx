@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+
 import { motion, AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/WelcomeScreen';
-import StudentInfo from './components/StudentInfo';
-import ProblemValidation from './components/ProblemValidation';
-import SolutionValidation from './components/SolutionValidation';
-import UsageBehavior from './components/UsageBehavior';
-import Feedback from './components/Feedback';
-import SuccessScreen from './components/SuccessScreen';
-import ProgressBar from './components/ProgressBar';
-import GamifiedPopup from './components/GamifiedPopup';
-import { generateDiscountCode } from './utils/generateCode';
+import WelcomeScreen from './sections/WelcomeScreen';
+import StudentInfo from './sections/StudentInfo';
+import ProblemValidation from './sections/ProblemValidation';
+import SolutionValidation from './sections/SolutionValidation';
+import UsageBehavior from './sections/UsageBehavior';
+import Feedback from './sections/Feedback';
+import SuccessScreen from './sections/SuccessScreen';
+import ProgressBar from './sections/ProgressBar';
+import GamifiedPopup from './sections/GamifiedPopup';
+import { generateDiscountCode } from '../../utils/generateCode';
 import { 
   SurveyData, 
   StudentInfo as StudentInfoType,
@@ -17,7 +18,7 @@ import {
   SolutionValidation as SolutionValidationType,
   UsageBehavior as UsageBehaviorType,
   Feedback as FeedbackType 
-} from './types/survey';
+} from '../../types/survey';
 
 const TOTAL_STEPS = 6;
 
@@ -49,7 +50,8 @@ const popupMessages = [
   }
 ];
 
-function App() {
+
+const Survey = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [surveyData, setSurveyData] = useState<Partial<SurveyData>>({});
   const [showPopup, setShowPopup] = useState(false);
@@ -138,4 +140,4 @@ function App() {
   );
 }
 
-export default App;
+export default Survey
