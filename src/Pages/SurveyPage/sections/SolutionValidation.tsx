@@ -52,7 +52,7 @@ const SolutionValidation: React.FC<SolutionValidationProps> = ({ onSubmit }) => 
         <div className="text-center mb-8">
           <Lightbulb className="mx-auto mb-4 text-[#831615]" size={48} />
           <h2 className="text-3xl font-bold text-gray-800 mb-2">The KuEats Solution</h2>
-          <p className="text-gray-600">What do you think about our food delivery idea? 💡</p>
+          <p className="text-gray-600">What do you think about our food delivery idea? </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">

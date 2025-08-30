@@ -60,7 +60,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
         
         <motion.button
           onClick={onStart}
-          className="bg-white text-[#831615] hover:bg-[#831615] hover:text-white text-xl font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center gap-3 mx-auto border-2 border-white/20 group"
+          className=" bg-[#831615] hover:bg-[#831615] text-white text-xl font-bold py-4 px-8 rounded-full  transition-all duration-300 flex justify-center items-center gap-3 mx-auto border-2 border-white/20 group"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6 }}

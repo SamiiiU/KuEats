@@ -24,27 +24,27 @@ const TOTAL_STEPS = 6;
 const popupMessages = [
   {
     title: "Great Start!",
-    message: "✅ You're 17% closer to your KuEats discount!",
+    message: "You're 17% closer to your KuEats discount!",
     emoji: "🎯"
   },
   {
     title: "Halfway There!",
-    message: "🔥 Keep going to unlock your discount!",
+    message: " Keep going to unlock your discount!",
     emoji: "🔥"
   },
   {
     title: "Almost Done!",
-    message: "🚀 Just two more steps to claim your reward!",
+    message: " Just two more steps to claim your reward!",
     emoji: "🚀"
   },
   {
     title: "So Close!",
-    message: "🎯 You're one step away from your KuEats discount!",
+    message: " You're one step away from your KuEats discount!",
     emoji: "⭐"
   },
   {
     title: "Final Step!",
-    message: "🥳 Congratulations! You've unlocked your KuEats launch reward!",
+    message: " Congratulations! You've unlocked your KuEats launch reward!",
     emoji: "🎉"
   }
 ];

@@ -8,9 +8,63 @@ interface StudentInfoProps {
 }
 
 const departments = [
-  'Computer Science', 'Engineering', 'Business', 'Medicine', 'Law', 
-  'Arts & Social Sciences', 'Sciences', 'Architecture', 'Education', 'Other'
+  'Agriculture & Agribusiness Management',
+  'Applied Chemistry',
+  'Applied Physics',
+  'Arabic',
+  'Bengali',
+  'Biochemistry',
+  'Biotechnology',
+  'Botany',
+  'Business Administration (KUBS)',
+  'Chemical Engineering',
+  'Chemistry',
+  'Commerce',
+  'Computer Science (UBIT)',
+  'Criminology',
+  'Economics',
+  'Education',
+  'English',
+  'Food Science & Technology',
+  'General History',
+  'Genetics',
+  'Geography',
+  'Geology',
+  'Health & Physical Education',
+  'International Relations',
+  'Islamic History',
+  'Islamic Learning',
+  'Karachi Medical & Dental College',
+  'Law',
+  'Library & Information Science',
+  'Mass Communication',
+  'Mathematical Sciences',
+  'Microbiology',
+  'Persian',
+  'Petroleum Technology',
+  'Pharmaceutical Chemistry',
+  'Pharmaceutics',
+  'Pharmacognosy',
+  'Pharmacology',
+  'Pharmacy Practice',
+  'Philosophy',
+  'Physics',
+  'Physiology',
+  'Political Science',
+  'Psychology',
+  'Public Administration',
+  'Quran-o-Sunnah',
+  'Sindhology',
+  'Social Work',
+  'Special Education',
+  'Statistics',
+  'Teacher Education',
+  'Urdu',
+  'Usool-ud-Din',
+  'Visual Studies',
+  'Zoology'
 ];
+
 
 const years = ['1st Year', '2nd Year', '3rd Year', '4th Year', '5th Year+'];
 
@@ -103,7 +157,7 @@ const StudentInfo: React.FC<StudentInfoProps> = ({ onSubmit }) => {
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             <label className="block text-lg font-semibold text-gray-900 mb-3">
-              Q3: What year are you in? 📖
+              Q3: What year are you in? 
             </label>
             <select
               value={formData.year}
@@ -124,7 +178,7 @@ const StudentInfo: React.FC<StudentInfoProps> = ({ onSubmit }) => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <label className="block text-lg font-semibold text-gray-900 mb-3">
-              Q4: Where do you live in hostel? 🏠
+              Q4: Do you live in hostel? 
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {['Yes', 'No'].map((option) => (

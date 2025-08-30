@@ -40,7 +40,7 @@ const GamifiedPopup: React.FC<GamifiedPopupProps> = ({ isVisible, onClose, title
             <p className="text-gray-600 mb-4">{message}</p>
             <motion.button
               onClick={onClose}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-700 transition-all"
+              className="bg-gradient-to-r from-[#831615] to-[#6b1311] text-white px-6 py-2 rounded-full font-semibold hover:from-[#531a19] hover:to-[#831615] transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

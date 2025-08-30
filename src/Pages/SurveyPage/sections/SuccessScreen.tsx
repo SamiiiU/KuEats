@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Share2, Copy, CheckCircle } from 'lucide-react';
-
+import logo from '../../../assets/logo.png'
 interface SuccessScreenProps {
   discountCode: string;
 }
@@ -40,18 +40,18 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
     <motion.div
       key={i}
       className="absolute w-3 h-3 bg-gradient-to-r from-orange-400 to-green-400 rounded-full"
-      initial={{ 
+      initial={{
         x: Math.random() * window.innerWidth,
         y: -20,
         rotate: 0,
         scale: 0
       }}
-      animate={{ 
+      animate={{
         y: window.innerHeight + 20,
         rotate: 360,
         scale: [0, 1, 0]
       }}
-      transition={{ 
+      transition={{
         duration: Math.random() * 2 + 1,
         delay: Math.random() * 2,
         ease: "easeOut"
@@ -72,14 +72,14 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
       transition={{ duration: 0.8 }}
     >
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#831615]/90 via-[#831615]/50 to-[#831615]/90" />
-      
+
       {confettiVisible && (
         <div className="fixed inset-0 pointer-events-none z-10">
           {confettiPieces}
@@ -94,17 +94,17 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
       >
         <motion.div
           className="text-8xl mb-6"
-          animate={{ 
+          animate={{
             rotate: [0, -5, 5, 0],
             scale: [1, 1.1, 1]
           }}
-          transition={{ 
-            duration: 1,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
+          
         >
-          🎉
+          <motion.div
+            className="text-8xl mb-6 bg-[#831615] w-fit mx-auto rounded-2xl"
+          >
+            <img src={logo} alt="" className='w-40' />
+          </motion.div>
         </motion.div>
 
         <motion.h1
@@ -122,7 +122,7 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          You've successfully unlocked your KuEats launch reward! 🥳
+          You've successfully unlocked your KuEats launch reward! 
         </motion.p>
 
         {/* Voucher Card */}
@@ -133,12 +133,12 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
           transition={{ delay: 0.9, duration: 0.8, type: "spring" }}
         >
           {/* Decorative elements */}
-          
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
-               Your KuEats Launch Discount Code
+              Your KuEats Launch Discount Code
             </h3>
-            
+
             <motion.div
               className="rounded-xl p-6 mb-4"
               whileHover={{ scale: 1.02 }}
@@ -154,12 +154,12 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
                 {copied ? 'Copied!' : 'Copy Code'}
               </button>
             </motion.div>
-            
+
             <p className="text-lg text-gray-900 font-medium">
               <span className="text-2xl font-bold text-[#831615]">10% OFF</span> your first order
             </p>
             <p className="text-sm text-gray-900 mt-2">
-              Show this code at launch to claim your discount! 🍔
+              Show this code at launch to claim your discount! 
             </p>
           </div>
         </motion.div>
@@ -167,15 +167,15 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
         {/* Share Button */}
         <motion.button
           onClick={handleShare}
-          className="bg-white text-[#831615] hover:bg-[#831615] hover:text-white text-lg font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center gap-3 mx-auto border-2 border-white/20"
+          className="bg-white text-[#831615] hover:bg-[#831615] hover:text-white text-lg font-bold p-4 sm:py-4 sm:px-8  rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center sm:gap-3 mx-auto border-2 border-white/20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.6 }}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Share2 />
           Tell friends to grab their discount too!
+          <Share2 />
         </motion.button>
       </motion.div>
     </motion.section>
