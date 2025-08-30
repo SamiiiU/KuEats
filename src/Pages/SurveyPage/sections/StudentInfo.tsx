@@ -124,10 +124,10 @@ const StudentInfo: React.FC<StudentInfoProps> = ({ onSubmit }) => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <label className="block text-lg font-semibold text-gray-900 mb-3">
-              Q4: Where do you live? 🏠
+              Q4: Where do you live in hostel? 🏠
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {['Hostel', 'Day Scholar'].map((option) => (
+              {['Yes', 'No'].map((option) => (
                 <motion.label
                   key={option}
                   className={`flex items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all ${

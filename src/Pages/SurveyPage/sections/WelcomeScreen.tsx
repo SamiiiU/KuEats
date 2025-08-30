@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-
+import logo from '../../../assets/logo.png'
 interface WelcomeScreenProps {
   onStart: () => void;
 }
@@ -26,18 +26,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
         transition={{ duration: 0.8 }}
       >
         <motion.div
-          className="text-8xl mb-6"
-          animate={{ 
-            rotate: [0, -5, 5, 0],
-            scale: [1, 1.01, 1 , 1.01 ]
-          }}
-          transition={{ 
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
+          className="text-8xl mb-6 bg-[#831615] w-fit mx-auto rounded-2xl"
         >
-          🍔🚲
+          <img src={logo} alt="" className='w-40' />
         </motion.div>
         
         <motion.h1

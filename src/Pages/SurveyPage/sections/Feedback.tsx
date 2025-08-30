@@ -48,7 +48,7 @@ const Feedback: React.FC<FeedbackProps> = ({ onSubmit }) => {
         <div className="text-center mb-8">
           <MessageSquare className="mx-auto mb-4 text-[#831615]" size={48} />
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Your Voice Matters</h2>
-          <p className="text-gray-600">Share your thoughts to help us build the perfect KuEats! 💬</p>
+          <p className="text-gray-600">Share your thoughts to help us build the perfect KuEats! </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">

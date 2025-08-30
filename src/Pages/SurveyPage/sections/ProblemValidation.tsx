@@ -20,9 +20,8 @@ const ProblemValidation: React.FC<ProblemValidationProps> = ({ onSubmit }) => {
     'Long queues at food courts',
     'Limited time between classes',
     'Distance to food areas',
-    'Limited food options',
-    'High prices',
-    'Poor food quality'
+    'Decide what to eat and from where',
+
   ];
 
   const isValid = formData.foodFrequency && formData.difficulties && formData.struggles.length > 0;
