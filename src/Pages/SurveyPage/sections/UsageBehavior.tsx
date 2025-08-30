@@ -14,9 +14,9 @@ const UsageBehavior: React.FC<UsageBehaviorProps> = ({ onSubmit }) => {
     paymentMethod: ''
   });
 
-  const timeOptions = ['Breakfast (7-10 AM)', 'Lunch (12-3 PM)', 'Evening Snacks (4-6 PM)', 'Dinner (7-10 PM)'];
+  const timeOptions = ['Early Morning (8-11 AM)', 'Lunch (12-3 PM)', 'Evening Snacks (4-6 PM)', 'Dinner (7-10 PM)(if Canteen is Open)'];
   const orderOptions = ['Snacks & Beverages', 'Full Meals', 'Desserts', 'Healthy Options', 'Quick Bites'];
-  const paymentOptions = ['UPI/Digital Wallet', 'Cash', 'Card', 'Campus Card'];
+  const paymentOptions = ['Cash', 'Card' ,'Digital Wallet (Easypaisa or JazzCash)'];
 
   const isValid = formData.buyingTime.length > 0 && formData.orderType.length > 0 && formData.paymentMethod;
 
@@ -146,10 +146,10 @@ const UsageBehavior: React.FC<UsageBehaviorProps> = ({ onSubmit }) => {
               Q12: Preferred payment method? 
             </label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {paymentOptions.map((option) => (
+              {paymentOptions.map((option , index) => (
                 <motion.label
                   key={option}
-                  className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${formData.paymentMethod === option
+                  className={`flex items-center justify-center p-3 border-2 rounded-xl cursor-pointer transition-all ${index == 2 ? 'col-span-2' : 'col-span-1'} ${formData.paymentMethod === option
                     ? 'bg-[#831615] text-white'
                     : ' text-[#831615] border-2 border-[#831615]'
                     }`}

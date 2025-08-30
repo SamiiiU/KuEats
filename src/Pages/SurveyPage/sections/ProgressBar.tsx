@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import logo from '../../../assets/logo.png'
 interface ProgressBarProps {
   currentStep: number;
   totalSteps: number;
@@ -10,11 +10,18 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep, totalSteps }) =>
   const progressPercentage = (currentStep / totalSteps) * 100;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-white/20">
-      <div className="px-4 py-3">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-white/20 ">
+
+      <div className="px-4 py-3 ">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">Survey Progress</span>
-          <span className="text-sm font-bold text-orange-600">{Math.round(progressPercentage)}% to discount!</span>
+          <motion.div
+            className="text-8xl mb-2 bg-[#831615] w-fit rounded-2xl"
+          >
+            <img src={logo} alt="" className='w-12' />
+          </motion.div>
+          <span className="text-lg font-medium text-gray-700">Survey Progress</span>
+
+          <span className="text-sm font-bold text-[#831615]">{Math.round(progressPercentage)}% to discount!</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div
