@@ -37,7 +37,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                 className='sm:text-2xl text-lg font-bold text-gray-900 mb-7 '>Our Side is currently under construction</motion.p>
+                 className='sm:text-2xl text-lg font-bold text-gray-900 mb-7 '>Our Platform is currently under construction</motion.p>
 
                 <Link to={"/Survey"}>
                 <motion.button
