@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import { motion, AnimatePresence } from 'framer-motion';
 import WelcomeScreen from './sections/WelcomeScreen';
 import StudentInfo from './sections/StudentInfo';
@@ -50,17 +49,46 @@ const popupMessages = [
   }
 ];
 
-
 const Survey = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [surveyData, setSurveyData] = useState<Partial<SurveyData>>({});
   const [showPopup, setShowPopup] = useState(false);
   const [discountCode] = useState(generateDiscountCode());
 
-  const handleStepComplete = (stepData: any, stepIndex: number) => {
-    setSurveyData(prev => ({ ...prev, ...stepData }));
+  // ✅ Submit function to Google Sheet via API
+  const handleSubmitToGoogleSheet = async (data: SurveyData) => {
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/chqcjs1ox8q6c', { // 🔑 Replace with your endpoint
+        method: 'POST',
+        mode: "no-cors", // 👈 This avoids CORS issues with Apps Script
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data }),
+      });
+      console.log("yai raha data " , data)
+
+      if (!response.ok) {
+        throw new Error('Failed to submit data');
+      }
+
+      console.log('✅ Data submitted to Google Sheet successfully!');
+      alert("Form submit")
+    } catch (error) {
+      console.error('Form not submiteadsdasd', error);
+    }
+  };
+
+  // ✅ Step completion handler
+  const handleStepComplete = async (stepData: any, stepIndex: number) => {
+    const updatedData = { ...surveyData, ...stepData };
+    setSurveyData(updatedData);
     setCurrentStep(stepIndex + 1);
-    
+
+    // If it's the last step -> Submit to Google Sheets
+    if (stepIndex === TOTAL_STEPS - 1) {
+      // @ts-ignore
+      await handleSubmitToGoogleSheet(updatedData as SurveyData);
+    }
+
     if (stepIndex < TOTAL_STEPS - 1) {
       setShowPopup(true);
     }
@@ -140,4 +168,4 @@ const Survey = () => {
   );
 }
 
-export default Survey
+export default Survey;

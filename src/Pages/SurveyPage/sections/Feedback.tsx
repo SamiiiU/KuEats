@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
-import { Feedback as FeedbackType } from '../types/survey';
+import { Feedback as FeedbackType } from '../../../types/survey';
 
 interface FeedbackProps {
   onSubmit: (data: FeedbackType) => void;
