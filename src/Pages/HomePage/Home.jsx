@@ -17,7 +17,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className='z-20 bg-white/90 backdrop-blur-sm px-6 py-10 rounded-3xl min-w-[600px] text-center'>
+                className='z-20 bg-white/90 backdrop-blur-sm px-3 smpx-6 py-10 rounded-3xl sm:min-w-[600px] min-w-[90%] text-center'>
 
                 <motion.div
                     initial={{ opacity: 0, y: -100 }}
@@ -32,16 +32,16 @@ const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }} 
-                    className='text-3xl font-bold text-gray-900 my-7 '>Welcome To KuEats </motion.h1>
+                    className='sm:text-3xl text-2xl font-bold text-gray-900 my-7 '>Welcome To KuEats </motion.h1>
                 <motion.p 
                 initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                 className='text-3xl font-bold text-gray-900 mb-7 '>Our Side is currently under construction</motion.p>
+                 className='sm:text-2xl text-lg font-bold text-gray-900 mb-7 '>Our Side is currently under construction</motion.p>
 
                 <Link to={"/Survey"}>
                 <motion.button
-                    className=" bg-[#831615] hover:bg-[#831615] z-20 text-white text-xl font-bold py-4 px-8 rounded-full  transition-all duration-300 flex justify-center items-center gap-3 mx-auto border-2 border-white/20 group"
+                    className=" bg-[#831615] hover:bg-[#831615] z-20 text-white sm:text-xl font-bold py-4 px-8 rounded-full  transition-all duration-300 flex justify-center items-center gap-3 mx-auto border-2 border-white/20 group"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.9, duration: 0.6 }}

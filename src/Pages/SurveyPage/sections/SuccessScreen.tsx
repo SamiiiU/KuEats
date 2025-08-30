@@ -24,12 +24,12 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
     if (navigator.share) {
       navigator.share({
         title: 'KuEats Survey',
-        text: 'I just completed the KuEats survey and got a 5% discount! You should try it too!',
+        text: 'I just completed the KuEats survey and got a 10% discount! You should try it too!',
         url: window.location.href
       });
     } else {
       // Fallback for browsers that don't support Web Share API
-      const text = 'I just completed the KuEats survey and got a 5% discount! You should try it too!';
+      const text = 'I just completed the KuEats survey and got a 10% discount! You should try it too!';
       const url = encodeURIComponent(window.location.href);
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`, '_blank');
     }
@@ -66,7 +66,7 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
 
   return (
     <motion.section
-      className="min-h-screen relative flex items-center justify-center p-4 pt-24 overflow-hidden"
+      className="min-h-screen relative flex items-center justify-center p-4 pt-24 pb-10 overflow-hidden"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
@@ -117,7 +117,7 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
         </motion.h1>
 
         <motion.p
-          className="text-xl text-white/95 mb-8 drop-shadow-md"
+          className="sm:text-xl text-white/95 mb-8 drop-shadow-md"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
@@ -167,7 +167,7 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ discountCode }) => {
         {/* Share Button */}
         <motion.button
           onClick={handleShare}
-          className="bg-white text-[#831615] hover:bg-[#831615] hover:text-white text-lg font-bold p-4 sm:py-4 sm:px-8  rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center sm:gap-3 mx-auto border-2 border-white/20"
+          className="bg-white text-[#831615] hover:bg-[#831615] hover:text-white sm:text-lg font-bold p-4 sm:py-4 sm:px-8  rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center sm:gap-3 mx-auto border-2 border-white/20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.6 }}

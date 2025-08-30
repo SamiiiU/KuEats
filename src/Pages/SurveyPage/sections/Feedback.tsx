@@ -25,9 +25,9 @@ const Feedback: React.FC<FeedbackProps> = ({ onSubmit }) => {
   return (
     <motion.section
       className="min-h-screen relative flex items-center justify-center p-4 pt-24 overflow-hidden"
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0,  }}
+      animate={{ opacity: 1,  }}
+      exit={{ opacity: 0,  }}
       transition={{ duration: 0.6 }}
     >
       {/* Background Image with Overlay */}
