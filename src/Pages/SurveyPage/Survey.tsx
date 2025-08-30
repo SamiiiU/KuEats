@@ -58,7 +58,7 @@ const Survey = () => {
   // ✅ Submit function to Google Sheet via API
   const handleSubmitToGoogleSheet = async (data: SurveyData) => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxD4Qgj5D4Gfpgui7b85iZW_YB1i6BIsIENNrl1RXd-2eoUXYk397pkgA-leAJuamTm/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbx1jsYOtWB4rvcmHhJwv_F0kPbsXWAHWcY7_FtcSG5GtmKahkUD942YgHbzS_DQA2Tb/exec', {
         method: 'POST',
         mode: "no-cors",
         headers: { 'Content-Type': 'application/json' },
