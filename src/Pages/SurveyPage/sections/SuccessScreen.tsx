@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Share2, Copy, CheckCircle } from 'lucide-react';
-import { generateDiscountCode } from '../utils/generateCode';
 
 interface SuccessScreenProps {
   discountCode: string;

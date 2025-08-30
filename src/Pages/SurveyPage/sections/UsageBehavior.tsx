@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock } from 'lucide-react';
-import { UsageBehavior as UsageBehaviorType } from '../types/survey';
+import { UsageBehavior as UsageBehaviorType } from '../../../types/survey';
 
 interface UsageBehaviorProps {
   onSubmit: (data: UsageBehaviorType) => void;

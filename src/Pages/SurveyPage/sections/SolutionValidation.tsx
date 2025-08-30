@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Lightbulb } from 'lucide-react';
-import { SolutionValidation as SolutionValidationType } from '../types/survey';
+import { SolutionValidation as SolutionValidationType } from '../../../types/survey';
 
 interface SolutionValidationProps {
   onSubmit: (data: SolutionValidationType) => void;

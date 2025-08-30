@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { AlertTriangle,  ArrowRight } from 'lucide-react';
-import { ProblemValidation as ProblemValidationType } from '../types/survey';
+import { ProblemValidation as ProblemValidationType } from '../../../types/survey';
 
 interface ProblemValidationProps {
   onSubmit: (data: ProblemValidationType) => void;
