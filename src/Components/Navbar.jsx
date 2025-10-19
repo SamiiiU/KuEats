@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Utensils } from 'lucide-react';
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const Navbar = () => {
     { name: 'Canteen Dashboard', href: '#canteen' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
+    
   ];
 
   return (
@@ -51,8 +53,8 @@ const Navbar = () => {
               <motion.a
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors hover:text-[#831615] ${
-                  scrolled ? 'text-gray-700' : 'text-white'
+                className={`font-medium transition-colors  ${
+                  scrolled ? 'text-gray-700 hover:text-[#831615]' : 'text-white'
                 }`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -62,6 +64,15 @@ const Navbar = () => {
                 {link.name}
               </motion.a>
             ))}
+
+            <Link
+                to={"/Survey"}
+                className={`font-medium transition-colors  ${
+                  scrolled ? 'text-gray-700 hover:text-[#831615]' : 'text-white'
+                }`}
+              >
+                Submit Review
+              </Link>
           </div>
 
           {/* Mobile menu button */}
