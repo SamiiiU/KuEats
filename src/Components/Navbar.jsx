@@ -17,12 +17,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'KuEats App', href: '#app' },
-    { name: 'Rider App', href: '#rider' },
-    { name: 'Canteen Dashboard', href: '#canteen' },
+    { name: 'KuEats App', href: 'https://ku-eats-user-app.vercel.app/login' },
+    { name: 'Rider App', href: 'https://ku-eats-rider.vercel.app/' },
+    { name: 'Canteen Dashboard', href: 'https://ku-eats-canteen-management.vercel.app/' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
-    
   ];
 
   return (
@@ -53,6 +52,7 @@ const Navbar = () => {
               <motion.a
                 key={link.name}
                 href={link.href}
+                target={index < 3 ? '_blank' : '_self'}
                 className={`font-medium transition-colors  ${
                   scrolled ? 'text-gray-700 hover:text-[#831615]' : 'text-white'
                 }`}
