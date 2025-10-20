@@ -97,6 +97,7 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
                 <a
+                target='_blank'
                   key={link.name}
                   href={link.href}
                   className="block px-3 py-2 text-gray-700 hover:text-[#831615] font-medium rounded-md hover:bg-gray-50"

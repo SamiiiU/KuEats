@@ -66,14 +66,16 @@ const Hero  = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <motion.button
+            <motion.a
+            href='https://ku-eats-user-app.vercel.app/login'
+            target='_blank'
               className="bg-[#831615] hover:bg-[#6b1211] text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 shadow-2xl hover:shadow-3xl transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               Go To KuEats App
               <ArrowRight className="h-5 w-5" />
-            </motion.button>
+            </motion.a>
             
             <motion.button
               className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 border border-white/30 transition-all"

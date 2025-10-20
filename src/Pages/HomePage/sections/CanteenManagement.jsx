@@ -48,7 +48,7 @@ const CanteenManagement = () => {
                     <span className="font-semibold">Today's Revenue</span>
                     <TrendingUp className="h-5 w-5" />
                   </div>
-                  <div className="text-3xl font-bold mb-1">₹12,450</div>
+                  <div className="text-3xl font-bold mb-1">PKR 12,450</div>
                   <div className="text-sm opacity-80">↗ 23% from yesterday</div>
                 </div>
                 
@@ -120,14 +120,16 @@ const CanteenManagement = () => {
               ))}
             </div>
 
-            <motion.button
-              className="bg-[#831615] hover:bg-[#6b1211] text-white px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 shadow-2xl transition-all"
+            <motion.a
+              href='https://ku-eats-canteen-management.vercel.app/'
+              target='_blank'
+              className="bg-[#831615] hover:bg-[#6b1211] w-fit text-white px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 shadow-2xl transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Register Your Canteen
+              Go To Canteen Management Dashboard
               <ArrowRight className="h-5 w-5" />
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>

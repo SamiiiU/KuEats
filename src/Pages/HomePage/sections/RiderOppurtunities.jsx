@@ -78,14 +78,16 @@ const RiderOpportunities = () => {
               ))}
             </div>
 
-            <motion.button
-              className="bg-white text-[#831615] hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 shadow-2xl transition-all"
+            <motion.a
+              href="https://ku-eats-rider.vercel.app/"
+              target='_blank'
+              className="bg-white text-[#831615] hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-bold flex w-fit items-center gap-2 shadow-2xl transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Become a Rider
+              Go To Rider App
               <ArrowRight className="h-5 w-5" />
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Visual */}
