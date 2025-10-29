@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'KuEats App', href: 'https://ku-eats-user-app.vercel.app/login' },
-    { name: 'Rider App', href: 'https://ku-eats-rider.vercel.app/' },
+    { name: 'Rider App', href: 'https://ku-eats-rider-app.vercel.app/' },
     { name: 'Canteen Dashboard', href: 'https://ku-eats-canteen-management.vercel.app/' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
