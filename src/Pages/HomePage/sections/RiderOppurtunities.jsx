@@ -109,7 +109,7 @@ const RiderOpportunities = () => {
                 <div className="bg-white/20 rounded-2xl p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-semibold">Today's Earnings</span>
-                    <span className="text-2xl font-bold text-yellow-400">₹450</span>
+                    <span className="text-2xl font-bold text-yellow-400">Rs 450</span>
                   </div>
                   <div className="text-sm text-white/70">12 deliveries completed</div>
                 </div>
