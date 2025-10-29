@@ -48,7 +48,7 @@ const CanteenManagement = () => {
                     <span className="font-semibold">Today's Revenue</span>
                     <TrendingUp className="h-5 w-5" />
                   </div>
-                  <div className="text-3xl font-bold mb-1">PKR 12,450</div>
+                  <div className="text-3xl font-bold mb-1">Rs 12,450</div>
                   <div className="text-sm opacity-80">↗ 23% from yesterday</div>
                 </div>
                 
